@@ -1,0 +1,163 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Header Section */
+header.banner {
+  background: linear-gradient(to right, #4a90e2, #50b3ff);
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em;
+}
+
+header.banner h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+header.banner h2 {
+  color: white; /* ทำให้ข้อความ "จังหวัดชลบุรี" เป็นสีขาว */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+header.header h2 {
+  text-align: center; /* จัดข้อความ "ไฮไลท์สถานที่ท่องเที่ยว" ให้อยู่ตรงกลาง */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #ffffff;
+  margin-top: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #4a90e2;
+  color: white;
+}
+
+/* Main Content */
+main {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h1,
+main h2 {
+  color: #4a90e2;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+fieldset {
+  border: 2px solid #4a90e2;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+}
+
+legend {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  text-align: center;
+}
+
+.gallery-item .overlay h3 {
+  margin-bottom: 0.5em;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Footer Section */
+footer {
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  background: #4a90e2; /* สีฟ้าของแถบ */
+  color: white; /* สีของข้อความ */
+  padding: 0.5em 0; /* ลดความหนาของแถบให้บางลง */
+  margin-top: 2em; /* การเพิ่มช่องว่างด้านบน */
+  width: 100%; /* ทำให้ footer ครอบคลุมทั้งหน้าจอ */
+  position: fixed; /* ทำให้ footer ติดอยู่ที่ด้านล่างของหน้า */
+  bottom: 0; /* ตำแหน่งที่อยู่ข้างล่างสุด */
+  left: 0;
+}
